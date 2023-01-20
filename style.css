@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: space-font;
+    src: url(/fonts/space\ age.otf);
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left{
+    background-image: url("space.jpg");
+    background-size:cover;
+    height: 100%;
+    width: 40%;
+    flex: 0.4;
+}
+
+
+.transparent-background{
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    margin-top: 25%;
+    justify-content: space-between;
+    height: 25%;
+}
+
+.banner{
+    color: white;
+    font-size: min(6vh, 10em);
+    font-weight: 900;
+    text-align: center;
+    font-family: space-font;
+    letter-spacing: 1vw;
+}
+
+.logo{
+    width: 25%;
+}
+
+.ball{
+    width: 100%;
+    height: auto;
+}
+
+.right{
+    background-color: rgba(148, 148, 148, 0.434);
+    height: 100%;
+    width: 60%;
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#upper-text{
+    font-size: 30px;
+    text-align: center;
+}
+
+#register-form{
+    border:1px solid black;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    justify-content: space-between;
+}
+
+input, label{
+    display: flex;
+}
+
+.register{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end
+}
+
+.register label{
+    display:flex;
+}
+.register input{
+    float:left;
+}
+
+.formrow{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: 1px red solid;
+    gap: 15px;
+}
+
+.inputgroup{
+    float: left;
+    width: auto;
+    border: 1px red solid;
+}
