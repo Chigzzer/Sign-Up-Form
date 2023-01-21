@@ -21,41 +21,44 @@
                 Register now and join your friends and even make new friends while you become the Messi of space.
             </div>
             <div id="register-form">
-                <div><p>Please Register Here</p></div>
-                <form action="/submit" class="register">
-                    <div class="formrow">
-                        <div class="inputgroup">
-                            <input required type="text" id="fname" name="fname">
-                            <label for="fname">First Name</label>
+                <form action="/submit" id="register" class="register">
+                    <fieldset class="formfield">
+                        <legend>Please Register</legend>
+                        <div class="formrow">
+                            <div class="inputgroup">
+                                <input required type="text" id="fname" name="fname">
+                                <label for="fname">First Name</label>
+                            </div>
+                            <div class="inputgroup">
+                                <input required type="text" id="lname" name="lname">
+                                <label for="lname">Last Name</label>
+                            </div>
                         </div>
-                        <div class="inputgroup">
-                            <input required type="text" id="lname" name="lname">
-                            <label for="lname">Last Name</label>
+                        <div class="formrow">
+                            <div class="inputgroup">
+                                <input required type="email" id="email" name="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="inputgroup">
+                                <input required type="tel" id="number" name="number">
+                                <label for="Number">Phone Number</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="formrow">
-                        <div class="inputgroup">
-                            <input required type="email" id="email" name="email">
-                            <label for="email">Email</label>
+                        <div class="formrow">
+                            <div class="inputgroup">
+                                <input required type="password" id="password" name="password">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="inputgroup">
+                                <input required type="password" id="password" name="rpassword">
+                                <label for="rpassword">Confirm Password</label>
+                            </div>
                         </div>
-                        <div class="inputgroup">
-                            <input required type="tel" id="number" name="number">
-                            <label for="Number">Phone Number</label>
-                        </div>
-                    </div>
-                    <div class="formrow">
-                        <div class="inputgroup">
-                            <input required type="password" id="password" name="password">
-                            <label for="password">Password</label>
-                        </div>
-                        <div class="inputgroup">
-                            <input required type="password" id="password" name="rpassword">
-                            <label for="rpassword">Confirm Password</label>
-                        </div>
-                    </div>
+                    </fieldset>
                 </form>
             </div>
-            <div id="log-in-text"></div>
+            <input type="submit" form="register" value="Submit">
+            <div id="log-in-text">Already have an account? <a href="/login" id="login"> Log in</a></div>
         </div>
     </main>
 </body>

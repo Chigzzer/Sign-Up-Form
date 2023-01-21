@@ -1,3 +1,7 @@
+:root{
+    --input-size: 80%;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,10 +12,19 @@
     src: url(/fonts/space\ age.otf);
 }
 
-main{
+body{
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
+    background-color: grey;
+}
+
+main{
+    display: flex;
+    height: 75%;
+    width: 75%;
 }
 
 .left{
@@ -19,7 +32,7 @@ main{
     background-size:cover;
     height: 100%;
     width: 40%;
-    flex: 0.4;
+    
 }
 
 
@@ -34,7 +47,7 @@ main{
 
 .banner{
     color: white;
-    font-size: min(6vh, 10em);
+    font-size: min(4vh, 10em);
     font-weight: 900;
     text-align: center;
     font-family: space-font;
@@ -43,6 +56,8 @@ main{
 
 .logo{
     width: 25%;
+    margin-left: 10px;
+    height: auto;
 }
 
 .ball{
@@ -51,28 +66,27 @@ main{
 }
 
 .right{
-    background-color: rgba(148, 148, 148, 0.434);
+    background-color: rgba(0, 0, 0, 0.8);
     height: 100%;
     width: 60%;
-    flex: 0.6;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #upper-text{
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
+    margin: 5px;
+    color: white;
 }
 
 #register-form{
     border:1px solid black;
-    background-color: azure;
-    display: flex;
-    flex-direction: column;
-    height: 75%;
-    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 50%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0px;
 }
 
 input, label{
@@ -85,32 +99,67 @@ input, label{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-end
+    margin-left: 25px;
+}
+
+.formfield{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: calc(90%);
+    padding: 2px;;
+}
+
+legend{
+    font-weight: 900;
 }
 
 .register label{
     display:flex;
-}
-.register input{
-    float:left;
+    width: var(--input-size);
+    text-transform: uppercase;
 }
 
-input:required+label::after{
+.register input{
+   font-family: inherit;
+   font-size: 100%;
+   width: var(--input-size);
+   height: 25px;
+}
+
+input:required + label::after{
     content: "\00a0*";
 }
 
 .formrow{
     display: flex;
     width: 100%;
-    justify-content: center;
-    border: 1px red solid;
-    gap: 15px;
+    justify-content: flex-start;
+    gap: 10%;    
 }
 
 .inputgroup{
-    float: left;
-    width: auto;
-    border: 1px red solid;
+    width: calc(var(--input-size) + 30px);
     display: flex;
     flex-direction: column-reverse;
+    gap: 5px;
+    margin-left: 1px;
+}
+
+input[type='submit']{
+    width: min(50%, 5rem);
+    height: 5%;
+    background-color: black;
+    color: white;
+    border-radius: 25em;
+    margin-left: 25px;
+}
+
+#log-in-text{
+    color: white;
+    margin-left: 25px;
+}
+
+#login{
+    color: white;
 }
