@@ -22,44 +22,63 @@
             </div>
             <div id="register-form">
                 <form action="/submit" id="register" class="register">
-                    <fieldset class="formfield">
-                        <legend>Please Register</legend>
-                        <div class="formrow">
-                            <div class="inputgroup">
-                                <input required type="text" id="fname" name="fname">
-                                <label for="fname">First Name</label>
-                            </div>
-                            <div class="inputgroup">
-                                <input required type="text" id="lname" name="lname">
-                                <label for="lname">Last Name</label>
-                            </div>
+                    <legend>Please Register</legend>
+                    <div class="formrow">
+                        <div class="inputgroup">
+                            <input required type="text" id="fname" name="fname">
+                            <label for="fname">First Name</label>
                         </div>
-                        <div class="formrow">
-                            <div class="inputgroup">
-                                <input required type="email" id="email" name="email">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="inputgroup">
-                                <input required type="tel" id="number" name="number">
-                                <label for="Number">Phone Number</label>
-                            </div>
+                        <div class="inputgroup">
+                            <input required type="text" id="lname" name="lname">
+                            <label for="lname">Last Name</label>
                         </div>
-                        <div class="formrow">
-                            <div class="inputgroup">
-                                <input required type="password" id="password" name="password">
-                                <label for="password">Password</label>
-                            </div>
-                            <div class="inputgroup">
-                                <input required type="password" id="password" name="rpassword">
-                                <label for="rpassword">Confirm Password</label>
-                            </div>
+                    </div>
+                    <div class="formrow">
+                        <div class="inputgroup">
+                            <input required type="email" id="email" name="email">
+                            <label for="email">Email</label>
                         </div>
-                    </fieldset>
+                        <div class="inputgroup">
+                            <input required type="tel" id="number" name="number">
+                            <label for="Number">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="formrow">
+                        <div class="inputgroup">
+                            <input required type="password" id="password" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="inputgroup">
+                            <input required type="password" id="rpassword" name="rpassword">
+                            <label for="rpassword">Confirm Password</label>
+                        </div>
+                    </div>
+                    <div id="pwmatch" class="hidden"></div>
+                    <div class="formrow" id="pos">
+                        <fieldset class="position">
+                            <legend>What position do you play?</legend>
+                            <label>
+                                <input type="radio" id="gk" value="gk" name="position">gk
+                            </label>
+                            <label>
+                                <input type="radio" id="def" value="def" name="position">def
+                            </label>
+                            <label>
+                                <input type="radio" id="mid" value="mid" name="position">mid
+                            </label>
+                            <label>
+                                <input type="radio" id="fwd" value="fwd" name="position">fwd
+                            </label>
+                        </fieldset>
+                    </div>
                 </form>
             </div>
-            <input type="submit" form="register" value="Submit">
-            <div id="log-in-text">Already have an account? <a href="/login" id="login"> Log in</a></div>
+            <div class="lower-section">
+                <div><input type="submit" form="register" value="Submit"></div>
+                <div id="log-in-text">Already have an account? <a href="/login" id="login"> Log in</a></div>
+            </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
