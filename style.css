@@ -32,7 +32,6 @@ main{
     background-size:cover;
     height: 100%;
     width: 40%;
-    
 }
 
 
@@ -108,9 +107,13 @@ input, label{
 .position{
     display: flex;
     flex-direction: row;
-    gap: 3px;
-    width: calc(90%);
-    padding: 2px;;
+    margin-right: 25px;
+    width: 90%;
+    padding: 10px;
+}
+
+.position label{
+    gap: 10px;
 }
 
 legend{
@@ -165,11 +168,19 @@ input[type='radio']:checked{
 }
 
 input[type='radio']:hover{
-    border: 1px white solid;
+    border: 2px blue solid;
 }
 
 input:focus{
     border: 2px solid  blue;
+}
+
+input:empty:invalid{
+    border: 1px solid black;
+}
+
+input:invalid{
+    border: 1px red solid;
 }
 
 #log-in-text{
