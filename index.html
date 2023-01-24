@@ -22,7 +22,7 @@
             </div>
             <div id="register-form">
                 <form action="/submit" id="register" class="register">
-                    <legend>Please Register</legend>
+                    <legend id="registerLegend">Please Register</legend>
                     <div class="formrow">
                         <div class="inputgroup">
                             <input required type="text" id="fname" name="fname">
@@ -53,6 +53,7 @@
                             <label for="rpassword">Confirm Password</label>
                         </div>
                     </div>
+                    <div class="requirements lengthwrong">Password must be 8 characters</div>
                     <div id="pwmatch" class="hidden"></div>
                     <div class="formrow" id="pos">
                         <fieldset class="position">
