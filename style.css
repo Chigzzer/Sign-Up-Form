@@ -39,8 +39,9 @@ main{
     display: flex;
     align-items: center;
     margin-top: 25%;
-    justify-content: space-between;
-    height: 25%;
+    justify-content: center;
+    height: auto;
+    padding: 5px;
 }
 
 .banner{
@@ -59,7 +60,7 @@ main{
 }
 
 .ball{
-    width: 100%;
+    width: 3.5vw;
     height: auto;
 }
 
