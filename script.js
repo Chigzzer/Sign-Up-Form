@@ -1,12 +1,39 @@
 const password = document.querySelector("#password");
 const repeated_password = document.querySelector("#rpassword");
 const text = document.getElementById('pwmatch');
+const root = document.querySelector(':root');
+const mode = document.querySelector('#mode');
 let message;
 let borderColor;
 repeated_password.addEventListener('input', checkPW);
 password.addEventListener('input', checkPW);
+mode.addEventListener('click', changeTheme);
 let error = '\u{026A0}'; 
 
+
+function changeTheme(){
+    if (!mode.classList.contains('dark')){
+        console.log('Working');
+        mode.classList.add('dark');
+        mode.classList.remove('light');
+        root.style.setProperty('--color-background', 'grey');
+        root.style.setProperty('--color-form', 'rgba(255, 255, 255, 0.9)');
+        root.style.setProperty('--color-right', 'rgba(0, 0, 0, 0.8)');
+        root.style.setProperty('--right-text', 'rgba(255,255,255');
+        root.style.setProperty('--form-text', 'rgba(0,0,0)');
+        mode.textContent = 'Dark Mode';
+    }
+    else{
+        mode.classList.add('light');
+        mode.classList.remove('dark');
+        root.style.setProperty('--color-background', 'grey');
+        root.style.setProperty('--color-right', 'rgba(255, 255, 255, 0.9)');
+        root.style.setProperty('--color-form', 'rgba(0, 0, 0, 0.8)');
+        root.style.setProperty('--right-text', 'rgba(0,0,0)');
+        root.style.setProperty('--form-text', 'rgba(255,255,255');
+        mode.textContent = 'Light Mode';
+    }
+}
 
 function checkPW(){
     passwordMatch();
