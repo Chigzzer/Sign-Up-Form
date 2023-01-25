@@ -20,8 +20,11 @@
 #mode{
     width: 100px;
     position: absolute;
-    top: 15px;
+    top: 1px;
     right: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 body{
@@ -35,15 +38,20 @@ body{
 
 main{
     display: flex;
-    height: 75%;
+    height: max(30rem, 70%, auto);
     width: 60%;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 10px;
 }
 
 .left{
     background-image: url("space.jpg");
     background-size:cover;
-    height: 100%;
+    height: max(40rem, 70%, auto);
     width: 40%;
+    align-self: stretch;
 }
 
 .transparent-background{
@@ -85,18 +93,20 @@ main{
     width: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: var(--right-text);
 }
 
 #upper-text{
-    font-size: 1rem;
+    font-size: max(55%, 1rem);
     text-align: center;
     margin: 5px;
     color: var(--right-text);
-    height: 20%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 
 #register-form{
@@ -105,7 +115,6 @@ main{
     color: var(--form-text);
     height: 60%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 input, label{
@@ -117,7 +126,7 @@ input, label{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     margin-left: 25px;
 }
 
@@ -159,14 +168,14 @@ input:required + label::after{
     width: 100%;
     justify-content: flex-start;
     gap: 10%;
-    margin-bottom: 10px;    
+    margin-bottom: 1rem;    
 }
 
 .inputgroup{
-    width: calc(var(--input-size) + 30px);
+    width: calc(var(--input-size));
     display: flex;
     flex-direction: column-reverse;
-    gap: 5%;
+    gap: 0%;
     margin-left: 1px;
 }
 
@@ -209,9 +218,10 @@ input:invalid{
     display: flex;
     flex-direction: column;
     margin-top: 25px;
+    margin-bottom: 25px;
     width: 100%;
     height: 25%;
-    gap: 15%;
+    gap: 25px;
 }
 
 input[type='submit']{
@@ -223,7 +233,7 @@ input[type='submit']{
     margin-left: 25px;
 }
 #registerLegend{
-    margin-bottom: 25px;
+    margin-bottom: 02%;
 }
 
 #login{
