@@ -3,6 +3,7 @@ const repeated_password = document.querySelector("#rpassword");
 const text = document.getElementById('pwmatch');
 const root = document.querySelector(':root');
 const mode = document.querySelector('#mode');
+const submit = document.querySelector('#submit'); 
 let message;
 let borderColor;
 repeated_password.addEventListener('input', checkPW);
@@ -10,6 +11,22 @@ password.addEventListener('input', checkPW);
 mode.addEventListener('click', changeTheme);
 let error = '\u{026A0}'; 
 
+
+function submitform(){
+    let pw = document.querySelector('#password').value;
+    let rpw = document.querySelector('#rpassword').value;
+    if (pw != rpw){
+        return;
+    }
+    else{
+        document.querySelector('#register').reset();
+        const confirm = document.createElement('div');
+        confirm.innerText = "Thank you for registering, you can sign in now!";
+        confirm.classList.add('registered-text');
+        document.querySelector('#register-form').appendChild(confirm);
+
+    }
+}
 
 function changeTheme(){
     if (!mode.classList.contains('dark')){

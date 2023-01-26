@@ -261,3 +261,10 @@ input[type='submit']{
 .lengthwrong:before{
     content: '❌   ';
 }
+
+.registered-text{
+    font-family: space-font;
+    letter-spacing: 2px;
+    font-size: min(25px, 20px);
+    margin: 20px;
+}

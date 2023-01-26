@@ -21,7 +21,7 @@
                 This is not a real online service. It is an online game; where we bring the beautiful game of football to Space. 
             </div>
             <div id="register-form">
-                <form action="/submit" id="register" class="register">
+                <form onsubmit="event.preventDefault(); submitform();" id="register" class="register">
                     <legend id="registerLegend">Register to join all your friends!</legend>
                     <div class="formrow">
                         <div class="inputgroup">
@@ -75,7 +75,7 @@
                 </form>
             </div>
             <div class="lower-section">
-                <div><input type="submit" form="register" value="Submit"></div>
+                <div><input type="submit" id="submit" form="register" value="Submit"></div>
                 <div id="log-in-text">Already have an account? <a href="/login" id="login"> Log in</a></div>
             </div>
         </div>
