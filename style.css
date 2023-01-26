@@ -157,6 +157,7 @@ legend{
    font-size: 100%;
    width: var(--input-size);
    height: auto;
+   border: 1px solid black;
 }
 
 input:required + label::after{

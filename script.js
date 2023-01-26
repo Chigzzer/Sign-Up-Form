@@ -13,17 +13,24 @@ let error = '\u{026A0}';
 
 
 function submitform(){
-    let pw = document.querySelector('#password').value;
-    let rpw = document.querySelector('#rpassword').value;
-    if (pw != rpw){
+    let pw = document.querySelector('#password');
+    let rpw = document.querySelector('#rpassword');
+    let matchingNodes = document.getElementsByClassName('matching');
+    if (pw.value != rpw.value){
         return;
     }
     else{
+        while (matchingNodes[0]){
+            text.removeChild(matchingNodes[0]);
+        }
+        pw.style.border = "1px solid black"; 
+        rpw.style.border = "1px solid black"; 
         document.querySelector('#register').reset();
         const confirm = document.createElement('div');
         confirm.innerText = "Thank you for registering, you can sign in now!";
         confirm.classList.add('registered-text');
         document.querySelector('#register-form').appendChild(confirm);
+        passwordLength();
 
     }
 }
