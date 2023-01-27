@@ -14,7 +14,7 @@
 
 @font-face {
     font-family: space-font;
-    src: url(/fonts/space\ age.otf);
+    src: url(fonts/space\ age.otf);
 }
 
 #mode{
@@ -232,7 +232,10 @@ input[type='submit']{
     color: var(--form-text);
     border-radius: 25em;
     margin-left: 25px;
+    display: flex;
+    justify-content: center;
 }
+
 #registerLegend{
     margin-bottom: 02%;
 }
