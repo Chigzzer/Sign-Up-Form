@@ -231,6 +231,7 @@ input[type='submit']{
     background-color: var(--right-text);
     color: var(--form-text);
     border-radius: 25em;
+    padding: 5px;
     margin-left: 25px;
     display: flex;
     justify-content: center;
@@ -238,6 +239,7 @@ input[type='submit']{
 
 #registerLegend{
     margin-bottom: 02%;
+    margin-top: 02%;
 }
 
 #login{
