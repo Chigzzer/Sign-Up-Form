@@ -43,18 +43,20 @@
                             <label for="Number">Phone Number</label>
                         </div>
                     </div>
-                    <div class="formrow">
-                        <div class="inputgroup">
-                            <input minlength="8" required type="password" id="password" name="password">
-                            <label for="password">Password</label>
+                    <div id="password-section">
+                        <div class="formrow">
+                            <div class="inputgroup">
+                                <input minlength="8" required type="password" id="password" name="password">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="inputgroup">
+                                <input minlength="8" required type="password" id="rpassword" name="rpassword">
+                                <label for="rpassword">Confirm Password</label>
+                            </div>
                         </div>
-                        <div class="inputgroup">
-                            <input minlength="8" required type="password" id="rpassword" name="rpassword">
-                            <label for="rpassword">Confirm Password</label>
-                        </div>
+                        <div class="requirements lengthwrong">Password must be 8 characters</div>
+                        <div id="pwmatch" class="hidden"></div>
                     </div>
-                    <div class="requirements lengthwrong">Password must be 8 characters</div>
-                    <div id="pwmatch" class="hidden"></div>
                     <div class="formrow" id="pos">
                         <fieldset class="position">
                             <legend>What position do you play?</legend>
