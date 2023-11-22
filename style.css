@@ -272,6 +272,10 @@ input[type='submit']{
   display: flex;
 }
 
+.requirements{
+
+    border: 1px solid G;
+}
 
 .hidden{
     display: none;
