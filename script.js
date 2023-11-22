@@ -12,7 +12,7 @@ mode.addEventListener('click', changeTheme);
 let error = '\u{026A0}'; 
 
 
-function submitform(){
+function submitForm(){
     let pw = document.querySelector('#password');
     let rpw = document.querySelector('#rpassword');
     let matchingNodes = document.getElementsByClassName('matching');
