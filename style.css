@@ -36,6 +36,7 @@
     border: 1px solid red;
     height: 85%;
     gap: 100px;
+    width: 50%;
 }
 
 #sign-up-form{
@@ -49,8 +50,58 @@
 }
 
 .form-row{
-    border: 1px solid blue;
+    border: 0px solid blue;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.input-group-left{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-right{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-right-radio{
+    display: flex;
+    gap: 15px;
+}
+
+.input-group-right-id{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-right-id > div{
+    display: flex;
+    gap: 10px;
+}
+
+#id-section{
+    display: flex;
+    align-items: center;
+    border: 0px solid yellow;
+    width: 100%;
+}
+
+#pwd-section{
+    width: 100%;
+}
+
+#submit-button{
+    font-size: 50px;
+    font-style: italic;
+}
+
+.hidden{
+    visibility: hidden;
 }
 
 #footer{
