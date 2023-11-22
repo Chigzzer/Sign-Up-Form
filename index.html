@@ -2,86 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Ball Sign Up</title>
+    <title>Sign Up Form</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <button id="mode" class="dark">Dark Mode</button>
-    <main>
-        <div class="left">
-            <div class="transparent-background">
-                <div class="logo"><img class="ball" src="ball.png" alt="Ball logo"></div>
-                <div class="banner">Space Ball</div>
-            </div>
-        </div>
-        <div class="right">
-            <div id="upper-text">
-                This is not a real online service. It is an online game; where we bring the beautiful game of Football to Space. 
-            </div>
-            <div id="register-form">
-                <form onsubmit="event.preventDefault(); submitForm();" id="register" class="register">
-                    <legend id="registerLegend">Register to join all your friends!</legend>
-                    <div class="formrow">
-                        <div class="inputgroup">
-                            <input required type="text" id="fname" name="fname">
-                            <label for="fname">First Name</label>
-                        </div>
-                        <div class="inputgroup">
-                            <input required type="text" id="lname" name="lname">
-                            <label for="lname">Last Name</label>
+    <div id="app">
+        <div id="main-body">
+            <div id="form-section">
+                <form id="sign-up-form">
+                    <div class="form-row">
+                        <label for="First name">First Name(s):</label>
+                        <input name="First name" placeholder="First name(s)" type="text">
+                        <label for="Surname">Surname:</label>
+                        <input name="Surname" placeholder="Surname" type="text">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <label for="Confirm email">Email</label>
+                        <input type="email" name="Confirm email" id="Confirm-email" placeholder="Confirm email">
+                    </div>
+                    <div id="pwd-section">
+                        <div class="form-row">
+                            <label for="Password">Password</label>
+                            <input type="password" name="Password" id="password">
+                            <label for="Confirm password">Password</label>
+                            <input type="password" name="Confirm password" id="confirm-password">
                         </div>
                     </div>
-                    <div class="formrow">
-                        <div class="inputgroup">
-                            <input required type="email" id="email" name="email">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="inputgroup">
-                            <input required type="tel" id="number" name="number">
-                            <label for="Number">Phone Number</label>
-                        </div>
+                    <div class="form-row">
+                        <div>Do you know your player or league ID?</div>
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="player_league ID" id="yes">
+                        <label for="no">No</label>
+                        <input type="radio" name="player_league ID" id="no">
                     </div>
-                    <div id="password-section">
-                        <div class="formrow">
-                            <div class="inputgroup">
-                                <input minlength="8" required type="password" id="password" name="password">
-                                <label for="password">Password</label>
-                            </div>
-                            <div class="inputgroup">
-                                <input minlength="8" required type="password" id="rpassword" name="rpassword">
-                                <label for="rpassword">Confirm Password</label>
+                    <div id="id-section">
+                        <div class="form-row">
+                            <label for="id-value">Your player/league ID</label>
+                            <input type="number" name="id-value" id="id-value" placeholder="ID" min="1">
+                            <div id="id-selection-text">
+                                <div>Is this your player or league ID</div>
+                                <label for="player-id">Player ID</label>
+                                <input type="radio" name="id_selection" id="player-id">
+                                <label for="league-id">League ID</label>
+                                <input type="radio" name="id_selection" id="league-id">
                             </div>
                         </div>
-                        <div class="requirements lengthwrong">Password must be 8 characters</div>
-                        <div id="pwmatch" class="hidden"></div>
-                    </div>
-                    <div class="formrow" id="pos">
-                        <fieldset class="position">
-                            <legend>What position do you play?</legend>
-                            <label>
-                                <input type="radio" id="gk" value="gk" name="position">gk
-                            </label>
-                            <label>
-                                <input type="radio" id="def" value="def" name="position">def
-                            </label>
-                            <label>
-                                <input type="radio" id="mid" value="mid" name="position">mid
-                            </label>
-                            <label>
-                                <input type="radio" id="fwd" value="fwd" name="position">fwd
-                            </label>
-                        </fieldset>
                     </div>
                 </form>
             </div>
-            <div class="lower-section">
-                <div><input type="submit" id="submit" form="register" value="Submit"></div>
-                <div id="log-in-text">Already have an account? <a href="/login" id="login"> Log in</a></div>
-            </div>
         </div>
-    </main>
+        <div id="footer">
+            Created by &copy Chiraag <a href="https://github.com/Chigzzer" target="_blank" rel="noreferrer noopener" onclick="window.open(this.href,'_blank');return false;">
+            <img class="logo" src="github.png" alt="git hub logo"></a>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
