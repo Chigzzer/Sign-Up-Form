@@ -6,8 +6,8 @@ const mode = document.querySelector('#mode');
 const submit = document.querySelector('#submit'); 
 let message;
 let borderColor;
-repeated_password.addEventListener('input', checkPW);
 password.addEventListener('input', checkPW);
+repeated_password.addEventListener('input', checkPW);
 mode.addEventListener('click', changeTheme);
 let error = '\u{026A0}'; 
 
@@ -80,7 +80,16 @@ function passwordLength(){
 
 function passwordMatch(){
     let matchingNodes = document.getElementsByClassName('matching');
-    if (document.getElementById('rpassword').value == document.getElementById('password').value){
+
+    if (document.getElementById('rpassword').value != document.getElementById('password').value){
+        while (matchingNodes[0]){
+            text.removeChild(matchingNodes[0]);
+        }
+        message = error + "Your passwords do not match";
+        borderColor = '3px solid red';
+    }
+
+    else if (document.getElementById('rpassword').value == document.getElementById('password').value) {
         while (matchingNodes[0]){
             text.removeChild(matchingNodes[0]);
         }
@@ -95,8 +104,11 @@ function passwordMatch(){
         borderColor = '3px solid red';
     }
 
-    if (!document.getElementById('rpassword').value){
+    if ((!document.getElementById('rpassword').value) && !document.getElementById('password').value){
         text.classList.add('hidden');
+        borderColor = '1px solid red'
+        document.getElementById('password').style.border = borderColor;
+        document.getElementById('rpassword').style.border = borderColor;
     }
     else{
         let matchText = document.createElement('div');

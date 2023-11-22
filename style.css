@@ -219,7 +219,7 @@ input:focus{
 }
 
 input:empty:invalid{
-    border: 1px solid black;
+    border: 1px solid red;
 }
 
 input:invalid{
@@ -272,9 +272,6 @@ input[type='submit']{
   display: flex;
 }
 
-.requirements{
-
-}
 
 .hidden{
     display: none;
