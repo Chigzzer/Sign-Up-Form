@@ -4,8 +4,12 @@ let confirmPasswordBox = document.querySelector('#confirm-password');
 let pwRequirements = document.querySelector('#pwd-requirements');
 
 
+
+confirmPasswordBox.addEventListener('input', checkPW);
 passwordBox.addEventListener('focus', showPwRequirements);
 passwordBox.addEventListener('blur', hidePwRequirements);
+confirmPasswordBox.addEventListener('focus', showPwRequirements);
+confirmPasswordBox.addEventListener('blur', hidePwRequirements);
 
 function holidaySelector(){
     console.log('running');
@@ -31,4 +35,18 @@ function showPwRequirements(){
 
 function hidePwRequirements(){
     pwRequirements.classList.add('none');
+}
+
+function checkPW(){
+    passwordMatch();
+}
+
+function passwordMatch(){
+    if (confirmPasswordBox.value == passwordBox.value){
+        console.log('yes');
+        document.querySelector('#pw-match-text').style.color = 'green';
+    }
+    else{
+        document.querySelector('#pw-match-text').style.color = 'red';
+    }
 }

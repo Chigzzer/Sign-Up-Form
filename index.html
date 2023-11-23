@@ -14,38 +14,39 @@
                     <div class="form-row">
                         <div class="input-group-left">
                             <label for="First name">First name(s):</label>
-                            <input name="First name" placeholder="First name(s)" type="text">
+                            <input name="First name" placeholder="First name(s)" type="text" required>
                         </div>
                         <div class="input-group-right">
                             <label for="Surname">Surname:</label>
-                            <input name="Surname" placeholder="Surname" type="text">
+                            <input name="Surname" placeholder="Surname" type="text" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="input-group-left">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </div>
                         <div class="input-group-right">
                             <label for="Confirm email">Confirm email</label>
-                            <input type="email" name="Confirm email" id="Confirm-email" placeholder="Confirm email">
+                            <input type="email" name="Confirm email" id="Confirm-email" placeholder="Confirm email" required>
                         </div>
                     </div>
                     <div id="pwd-section">
                         <div class="form-row">
                             <div class="input-group-left">
                                 <label for="Password">Password</label>
-                                <input type="password" name="Password" id="password" placeholder="Password">
+                                <input type="password" name="Password" id="password" placeholder="Password" minlength="8" required>
                             </div>
                             <div class="input-group-right">
                                 <label for="Confirm password">Confirm password</label>
-                                <input type="password" name="Confirm password" placeholder="Confirm Password" id="confirm-password">
+                                <input type="password" name="Confirm password" placeholder="Confirm password" id="confirm-password" required>
                             </div>
                         </div>
                         <div id="pwd-requirements" class="none">
-                            <p>8 Characters minimum</p>
+                            <p>8 characters minimum</p>
                             <p>1+ higher case characters</p>
                             <p>1+ numerical value</p>
+                            <div id="pw-match-text">Passwords are not matching</div>
                         </div>
                     </div>
                     <div class="form-row">
