@@ -84,7 +84,7 @@
     gap: 10px;
 }
 
-#id-section{
+#holiday-section{
     display: flex;
     align-items: center;
     border: 0px solid yellow;
@@ -102,6 +102,10 @@
 
 .hidden{
     visibility: hidden;
+}
+
+.none{
+    display: none;
 }
 
 #footer{

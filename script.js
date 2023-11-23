@@ -1,18 +1,34 @@
-idSection = document.querySelector('#id-section');
+let holidaySection = document.querySelector('#holiday-section');
+let passwordBox = document.querySelector('#password');
+let confirmPasswordBox = document.querySelector('#confirm-password');
+let pwRequirements = document.querySelector('#pwd-requirements');
 
 
-function idKnownSelector(){
+passwordBox.addEventListener('focus', showPwRequirements);
+passwordBox.addEventListener('blur', hidePwRequirements);
+
+function holidaySelector(){
     console.log('running');
-    let idKnown = document.querySelector('input[name="player_league ID"]:checked').value;
-    console.log(idKnown);
-    if(idKnown == 'yes'){
+    let holidayKnown = document.querySelector('input[name="holidayQuery"]:checked').value;
+    console.log(holidayKnown);
+    if (holidayKnown == 'yes'){
         console.log('YES');
-        idSection.classList.remove('hidden');
+        holidaySection.classList.remove('hidden');
     }
     else{
         console.log('NO');
-        document.querySelector('#id-value').value = '';
-        idSection.classList.add('hidden');
+        document.querySelector('#location-text').value = '';
+        document.querySelector('#yearOfTravel').value = '';
+        holidaySection.classList.add('hidden');
 
     }
+}
+
+
+function showPwRequirements(){
+    pwRequirements.classList.remove('none');
+}
+
+function hidePwRequirements(){
+    pwRequirements.classList.add('none');
 }

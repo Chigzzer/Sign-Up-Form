@@ -13,7 +13,7 @@
                 <form id="sign-up-form">
                     <div class="form-row">
                         <div class="input-group-left">
-                            <label for="First name">First Name(s):</label>
+                            <label for="First name">First name(s):</label>
                             <input name="First name" placeholder="First name(s)" type="text">
                         </div>
                         <div class="input-group-right">
@@ -35,39 +35,39 @@
                         <div class="form-row">
                             <div class="input-group-left">
                                 <label for="Password">Password</label>
-                                <input type="password" name="Password" id="password">
+                                <input type="password" name="Password" id="password" placeholder="Password">
                             </div>
                             <div class="input-group-right">
                                 <label for="Confirm password">Confirm password</label>
-                                <input type="password" name="Confirm password" id="confirm-password">
+                                <input type="password" name="Confirm password" placeholder="Confirm Password" id="confirm-password">
                             </div>
+                        </div>
+                        <div id="pwd-requirements" class="none">
+                            <p>8 Characters minimum</p>
+                            <p>1+ higher case characters</p>
+                            <p>1+ numerical value</p>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="input-group-left">Do you know your player or league ID?</div>
+                        <div class="input-group-left">Have you been on holiday before?</div>
                         <div class="input-group-right-radio">
                             <label for="yes">Yes</label>
-                            <input type="radio" name="player_league ID" id="yes" value="yes" onclick="idKnownSelector();">
+                            <input type="radio" name="holidayQuery" id="yes" value="yes" onclick="holidaySelector();">
                             <label for="no">No</label>
-                            <input type="radio" name="player_league ID" id="no" checked="checked" value="no" onclick="idKnownSelector();">
+                            <input type="radio" name="holidayQuery" id="no" checked value="no" onclick="holidaySelector();">
                         </div>
                     </div>
 
 
-                    <div id="id-section">
+                    <div id="holiday-section" class="hidden">
                         <div class="form-row">
                             <div class="input-group-left">
-                                <label for="id-value">Your player/league ID</label>
-                                <input type="number" name="id-value" id="id-value" placeholder="ID" min="1">
+                                <label for="location">Where did you last go on holiday?</label>
+                                <input type="text" name="location" id="location-text" placeholder="Country">
                             </div>
-                            <div class="input-group-right-id" id="id-selection-text">
-                                <div>Is this your player or league ID</div>
-                                <div>
-                                    <label for="player-id">Player ID</label>
-                                    <input type="radio" name="id_selection" id="player-id">
-                                    <label for="league-id">League ID</label>
-                                    <input type="radio" name="id_selection" id="league-id">
-                                </div>
+                            <div class="input-group-right-id" id="holiday-selection-text">
+                                <label for="yearOfTravel">What year did you travel here?</label>
+                                <input type="number" name="yearOfTravel" min="1950" max="9999" id="yearOfTravel" placeholder="Year of Travel">
                             </div>
                         </div>
                     </div>
