@@ -105,23 +105,17 @@
 
 #pwd-requirements-inner{
     display: flex;
-}
-
-
-input:valid{
-    border: 10px solid green;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 input:focus{
     border: 2px solid  blue;
 }
 
-input:empty{
-    border: 1px solid black;
-}
-
 input:invalid{
-    border: 3px red solid;
+    border: 2px red solid;
 }
 
 #submit-button{
