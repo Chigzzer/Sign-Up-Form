@@ -5,7 +5,7 @@ let passwordMatching;
 let passwordLength;
 let passwordCharacter;
 let passwordNumber;
-let passwordCorrect;
+let passwordCorrectValue;
 
 
 confirmPasswordBox.addEventListener('input', checkPW);
@@ -87,12 +87,12 @@ function pwNumber(){
 function passwordCorrect(){
     if ( passwordMatching && passwordCharacter && passwordLength && passwordNumber){
         passwordBox.style.border = '1px solid green';
-        confirmedPasswordBox.style.border = '1px solid green';
-        passwordCorrect = true;
+        confirmPasswordBox.style.border = '1px solid green';
+        passwordCorrectValue = true;
     }
     else{
         passwordBox.style.border = '2px solid red';
-        confirmedPasswordBox.style.border = '2px solid red';
-        passwordCorrect = false;
+        confirmPasswordBox.style.border = '2px solid red';
+        passwordCorrectValue = false;
     }
 }
