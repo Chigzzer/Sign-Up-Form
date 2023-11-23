@@ -24,3 +24,4 @@ A simple project to help me understand how forms work and how to style them. Esp
 * Add dark and light theme to page.
 * Check form is filled properly prior to submitting
 * code to make sure emails match
+* remove saved login box
