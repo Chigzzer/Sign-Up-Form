@@ -8,10 +8,19 @@ A simple project to help me understand how forms work and how to style them. Esp
 ## What Could Be Added/Improved
 * View on mobile and other devices.
 * Style of the different themes
-* TIdy up of the code in terms of comments and css 
+* Tidy up of the code in terms of comments and css 
+
 
 # What I have Learnt
 * How to make the font size change with the screen size and the other multiple functions in CSS.
 * How to create forms and use appearance none to style the form to your specific liking.
 * Use of variables in CSS and how to edit them via JavaScript (E.G: Dark/Light theme).
 * Use of validation in the form, such as making sure the passwords match each other and pass al requirements.
+
+
+
+# To Do
+* Add background and design of page.
+* Add dark and light theme to page.
+* Check form is filled properly prior to submitting
+* code to make sure emails match
