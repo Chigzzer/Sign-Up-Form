@@ -42,36 +42,17 @@
                                 <input type="password" name="Confirm password" placeholder="Confirm password" id="confirm-password" required>
                             </div>
                         </div>
-                        <div id="pwd-requirements" class="none">
-                            <div id="pw-length-text">8 characters minimum</div>
-                            <div id="uppercase-text">1+ upper case characters and 1+ lower case characters </div>
-                            <div id="number-text">1+ numerical value</div>
-                            <div id="pw-match-text">Passwords are not matching</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group-left">Have you been on holiday before?</div>
-                        <div class="input-group-right-radio">
-                            <label for="yes">Yes</label>
-                            <input type="radio" name="holidayQuery" id="yes" value="yes" onclick="holidaySelector();">
-                            <label for="no">No</label>
-                            <input type="radio" name="holidayQuery" id="no" checked value="no" onclick="holidaySelector();">
-                        </div>
-                    </div>
-
-
-                    <div id="holiday-section" class="hidden">
-                        <div class="form-row">
-                            <div class="input-group-left">
-                                <label for="location">Where did you last go on holiday?</label>
-                                <input type="text" name="location" id="location-text" placeholder="Country">
-                            </div>
-                            <div class="input-group-right-id" id="holiday-selection-text">
-                                <label for="yearOfTravel">What year did you travel here?</label>
-                                <input type="number" name="yearOfTravel" min="1950" max="9999" id="yearOfTravel" placeholder="Year of Travel">
+                        
+                        <div id="pwd-requirements" class="hidden">
+                            <div id="pwd-requirements-inner">
+                                <div id="pw-length-text">8 characters minimum</div>
+                                <div id="uppercase-text">1+ upper case characters and 1+ lower case characters </div>
+                                <div id="number-text">1+ numerical value</div>
+                                <div id="pw-match-text">Passwords are not matching</div>
                             </div>
                         </div>
-                    </div>
+
+                    </div>                   
                 </form>
                 <input type="submit" value="Submit" id="submit-button" form="sign-up-form">
             </div>
