@@ -10,7 +10,7 @@
     <div id="app">
         <div id="main-body">
             <div id="form-section">
-                <form id="sign-up-form">
+                <form id="sign-up-form" onsubmit="return formSubmit()">
                     <div class="form-row">
                         <div class="input-group-left">
                             <label for="First name">First name(s):</label>
@@ -28,7 +28,7 @@
                         </div>
                         <div class="input-group-right">
                             <label for="Confirm email">Confirm email</label>
-                            <input type="email" name="Confirm email" id="Confirm-email" placeholder="Confirm email" required>
+                            <input type="email" name="Confirm email" id="confirm-email" placeholder="Confirm email" required>
                         </div>
                     </div>
                     <div id="pwd-section">
@@ -54,7 +54,7 @@
 
                     </div>                   
                 </form>
-                <input type="submit" value="Submit" id="submit-button" form="sign-up-form">
+                <input type="submit" value="Check In" id="submit-button" form="sign-up-form">
             </div>
         </div>
         <div id="footer">

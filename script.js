@@ -6,8 +6,9 @@ let passwordLength;
 let passwordCharacter;
 let passwordNumber;
 let passwordCorrectValue;
+let emailMatch;
 
-
+document.querySelector('#confirm-email').addEventListener('input', emailMatchChecker);
 confirmPasswordBox.addEventListener('input', checkPW);
 passwordBox.addEventListener('input', checkPW);
 passwordBox.addEventListener('focus', showPwRequirements);
@@ -95,4 +96,30 @@ function passwordCorrect(){
         confirmPasswordBox.style.border = '2px solid red';
         passwordCorrectValue = false;
     }
+}
+
+function emailMatchChecker(){
+    
+    if (document.querySelector('#email').value == document.querySelector('#confirm-email').value){
+        console.log('matching');
+        emailMatch = true;
+        document.querySelector('#email').style.border = '1px solid green';
+        document.querySelector('#confirm-email').style.border = '1px solid green';
+    }
+    else{
+        console.log('not matching');
+        emailMatch = false;
+        document.querySelector('#email').style.border = '1px solid red';
+        document.querySelector('#confirm-email').style.border = '1px solid red';
+    }
+}
+
+function formSubmit(){
+    console.log('submitted');
+    if (emailMatch == true && passwordCorrectValue == true){
+        return true;
+    }
+    else{
+        return false;
+    }   
 }
