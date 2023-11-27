@@ -33,7 +33,7 @@
 
 #main-body{ 
     grid-area: main;
-    border: 0px solid blue;
+    border: 1px solid blue;
     display: flex;
     flex-direction: column ;
     justify-content: center;
@@ -43,9 +43,10 @@
     background-image: url("airplane.jpg");
     gap: 5px;
     background-size: 100% 100%;
-    background-blend-mode:color-burn;
     position: relative;
+    
 }
+
 #image-caption{
     position: absolute;
     bottom: 0px;
@@ -55,7 +56,7 @@
 }
 
 .rs-main{
-    border: 2px red solid;
+    border: 0px red solid;
     width: 100%;
     height: 25%;
 }
@@ -64,11 +65,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid red;
+    border: 0px solid red;
     height: 100%;
-    gap: 100px;
     width: 50%;
     background-color: skyblue;
+    margin: 5vh;
 }
 
 #sign-up-form{
@@ -79,18 +80,20 @@
     flex-direction: column;
     height: 100%;
     gap: 15px;
+    padding: 15px;
 }
 
 .form-row{
-    border: 2px solid blue;
+    border: 0px solid blue;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    padding: 5px;
     
 }
 .form-row input{
-    width: 100%;
+    width: 90%;
 
 }
 
