@@ -9,6 +9,7 @@ let passwordCorrectValue;
 let emailMatch;
 
 document.querySelector('#confirm-email').addEventListener('input', emailMatchChecker);
+document.querySelector('#email').addEventListener('input', emailMatchChecker);
 confirmPasswordBox.addEventListener('input', checkPW);
 passwordBox.addEventListener('input', checkPW);
 passwordBox.addEventListener('focus', showPwRequirements);
@@ -120,6 +121,7 @@ function formSubmit(){
         return true;
     }
     else{
+        alert('Please double check your input');
         return false;
     }   
 }
