@@ -78,8 +78,8 @@
 #form-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    border: 0px solid red;
+    justify-content: center;
+    border: 2px solid red;
     height: 100%;
     width: max(30%, 500px);
     background-color: skyblue;
@@ -87,13 +87,13 @@
 }
 
 #sign-up-form{
-    border:0px solid green;
+    border:2px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    gap: 10px;
+    gap: 00px;
 }
 
 .form-row{

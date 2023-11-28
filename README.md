@@ -25,3 +25,4 @@ A simple project to help me understand how forms work and how to style them. Esp
 * Check form is filled properly prior to submitting
 * code to make sure emails match
 * remove saved login box
+* Requirements add logo as well as colour code for colourblind people  
