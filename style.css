@@ -81,6 +81,7 @@
     border: 0px solid black;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #sign-up-form{
