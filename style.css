@@ -146,6 +146,9 @@ label{
     flex-wrap: wrap;
     flex-direction: column;
 }
+#number-text{
+    border: 1px solid red;
+}
 
 input:focus{
     border: 2px solid  blue;

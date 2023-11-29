@@ -39,12 +39,12 @@ function passwordMatch(){
     if (confirmPasswordBox.value == passwordBox.value && confirmPasswordBox.value != ''){
         console.log('yes');
         document.querySelector('#pw-match-text').style.color = 'green';
-        document.querySelector('#pw-match-text').innerHTML = 'Passwords match';
+        document.querySelector('#pw-match-text').innerHTML = 'Passwords match &#10004';
         passwordMatching = true;
     }
     else{
         document.querySelector('#pw-match-text').style.color = 'red';
-        document.querySelector('#pw-match-text').innerHTML = 'Passwords do not match';
+        document.querySelector('#pw-match-text').innerHTML = 'Passwords do not match &#10005;';
         passwordMatching = false;
     }
 }
@@ -54,10 +54,12 @@ function pwLength(){
     if (passwordBox.value.length < 8){
         document.querySelector('#pw-length-text').style.color = 'red';
         passwordLength = false;
+        document.querySelector('#pw-length-text').innerHTML = '8 characters minimum &#10005';
     }
     else{
         document.querySelector('#pw-length-text').style.color = 'green';
         passwordLength = true;
+        document.querySelector('#pw-length-text').innerHTML = '8 characters minimum &#10004';
     }
 }
 
@@ -68,10 +70,12 @@ function pwUppercase(){
     if (upper && lower){
         document.querySelector('#uppercase-text').style.color = 'green';
         passwordCharacter = true;
+        document.querySelector('#uppercase-text').innerHTML = '1+ upper case characters and 1+ lower case characters &#10004';
     }
     else{
         document.querySelector('#uppercase-text').style.color = 'red';
         passwordCharacter = false;
+        document.querySelector('#uppercase-text').innerHTML = '1+ upper case characters and 1+ lower case characters &#10005';
     }
 }
 
@@ -79,10 +83,12 @@ function pwNumber(){
     if (/\d/.test(passwordBox.value)){
         document.querySelector('#number-text').style.color = 'green';
         passwordNumber = true;
+        document.querySelector('#number-text').innerHTML = '1+ numerical value &#10004';
     }
     else{
         document.querySelector('#number-text').style.color = 'red';
         passwordNumber = false;
+        document.querySelector('#number-text').innerHTML = '1+ numerical value &#x2715';
     }
 }
 
