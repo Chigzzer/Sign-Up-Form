@@ -6,7 +6,7 @@
     <title>Sign Up Form</title>
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body onload="screenSize();">
     <div id="app">
         <div id="header">
             <div id="site-title">Travel Diary</div>
@@ -23,11 +23,11 @@
                 <form id="sign-up-form" onsubmit="return formSubmit()">
                     <div class="form-row">
                         <div class="input-group-left">
-                            <label for="First name">First name(s):</label>
+                            <label for="First name">First name(s)</label>
                             <input name="First name" placeholder="First name(s)" type="text" required>
                         </div>
                         <div class="input-group-right">
-                            <label for="Surname">Surname:</label>
+                            <label for="Surname">Surname</label>
                             <input name="Surname" placeholder="Surname" type="text" required>
                         </div>
                     </div>

@@ -1,6 +1,8 @@
 let passwordBox = document.querySelector('#password');
 let confirmPasswordBox = document.querySelector('#confirm-password');
 let pwRequirements = document.querySelector('#pwd-requirements');
+let leftSide = document.querySelector('.rs-main');
+let rightSide = document.querySelector('#form-section');
 let passwordMatching;
 let passwordLength;
 let passwordCharacter;
@@ -16,6 +18,22 @@ passwordBox.addEventListener('focus', showPwRequirements);
 passwordBox.addEventListener('blur', hidePwRequirements);
 confirmPasswordBox.addEventListener('focus', showPwRequirements);
 confirmPasswordBox.addEventListener('blur', hidePwRequirements);
+
+
+
+function screenSize(){
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|Blackberry|IEmobile/i;
+    console.log("This loaded");
+    if (regex.test(navigator.userAgent)){
+        leftSide.style.height = "250px";
+        rightSide.style.width = '360px';
+    }
+    else{
+        leftSide.style.height = "100%";
+    }
+
+    return regex.test(navigator.userAgent) ;
+}
 
 
 

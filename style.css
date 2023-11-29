@@ -38,8 +38,8 @@
     flex-direction: row ;
     align-items:flex-start ;
     width: 100%;
-    height: 100%;
     flex-wrap: wrap;
+    gap: 50px;
     overflow: scroll;
     background-color: skyblue;
 }
@@ -57,8 +57,7 @@
     position: relative;
     background-size: 100% 100%;
     border: 0px red solid;
-    width:60%;
-    height: 100%;
+    width:max(60%, 400px);
     position: relative;
 }
 
@@ -76,24 +75,23 @@
 }
 
 #form-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid red;
     height: 100%;
-    width: max(30%, 500px);
     background-color: skyblue;
-    padding-left: 20px;
+    padding-left: 0px;
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
 }
 
 #sign-up-form{
-    border:2px solid green;
+    border:0px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    gap: 00px;
+    width: 90%;
+    gap:30px;
 }
 
 .form-row{
@@ -101,14 +99,13 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    padding: 5px;
+    gap: 0px;
+    padding: 0px;
     
 }
 .form-row input{
     width: 90%;
     height: 30px;
-
 }
 
 .input-group-left{
@@ -137,7 +134,7 @@ label{
 }
 
 #pwd-requirements{
-    border: 1px solid red;
+    border: 0px solid red;
 }
 
 #pwd-requirements-inner{
@@ -147,7 +144,7 @@ label{
     flex-direction: column;
 }
 #number-text{
-    border: 1px solid red;
+    border: 0px solid red;
 }
 
 input:focus{
@@ -174,6 +171,6 @@ input:invalid{
 
 #footer{
     grid-area: footer;
-    border: 1px red solid;
+    border: 0px red solid;
 
 }
