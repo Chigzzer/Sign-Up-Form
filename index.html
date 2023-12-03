@@ -20,49 +20,47 @@
                 <div id="text-desc">Register now to get started on your own virtual diary...</div>
             </div>
             <div id="form-section">
-                <form id="sign-up-form" onsubmit="return formSubmit()">
-                    <div class="form-row">
-                        <div class="input-group-left">
-                            <label for="First name">First name(s)</label>
-                            <input name="First name" placeholder="First name(s)" type="text" required>
-                        </div>
-                        <div class="input-group-right">
-                            <label for="Surname">Surname</label>
-                            <input name="Surname" placeholder="Surname" type="text" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group-left">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                        </div>
-                        <div class="input-group-right">
-                            <label for="Confirm email">Confirm email</label>
-                            <input type="email" name="Confirm email" id="confirm-email" placeholder="Confirm email" required>
-                        </div>
-                    </div>
-                    <div id="pwd-section">
+                <form id="sign-up-form" onsubmit="return formSubmit()" autocomplete="off">
+                    <div class="sub-section">
                         <div class="form-row">
-                            <div class="input-group-left">
-                                <label for="Password">Password</label>
-                                <input type="password" name="Password" id="password" placeholder="Password" minlength="8" autocomplete="new-password" required >
-                            </div>
-                            <div class="input-group-right">
-                                <label for="Confirm password">Confirm password</label>
-                                <input type="password" name="Confirm password" placeholder="Confirm password" id="confirm-password" autocomplete="new-password" required>
-                            </div>
+                            <label for="First name">First name(s)</label>
+                            <input style="font-size: 18px;" name="First name" placeholder="First name(s)" type="text" required>
                         </div>
-                        
-                        <div id="pwd-requirements" class="hidden">
-                            <div id="pwd-requirements-inner">
+                        <div class="form-row">
+                            <label for="Surname">Surname</label>
+                            <input style="font-size: 18px;" name="Surname" placeholder="Surname" type="text" required>
+                        </div>
+                    </div>
+                    <div class="sub-section">
+                        <div class="form-row">
+                            <label for="email">Email</label>
+                            <input style="font-size: 18px;" type="email" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="Confirm email">Confirm email</label>
+                            <input style="font-size: 18px;" type="email" name="Confirm email" id="confirm-email" placeholder="Confirm email" required>
+                        </div>  
+                    </div>
+                    <div class="sub-section">
+                        <div class="form-row">
+                            <label for="Password">Password</label>
+                            <input style="font-size: 18px;" type="password" name="Password" id="password" placeholder="Password" minlength="8" autocomplete="new-password" required >
+                        </div>
+                        <div class="form-row">
+                            <label for="Confirm password">Confirm password</label>
+                            <input style="font-size: 18px;" type="password" name="Confirm password" placeholder="Confirm password" id="confirm-password" autocomplete="new-password" required>
+                        </div>                        
+                        <div id="pwd-requirements" class="hidden form-row">
                                 <div id="pw-length-text">8 characters minimum</div>
                                 <div id="uppercase-text">1+ upper case characters and 1+ lower case characters </div>
+                                <div id="symbol-text">1+ special character (.,?!&@#)</div>
                                 <div id="number-text">1+ numerical value</div>
                                 <div id="pw-match-text">Passwords are not matching</div>
-                            </div>
                         </div>
                     </div>                   
-                    <input type="submit" value="Check In" id="submit-button" form="sign-up-form">
+                    <div class="submit-div">
+                        <input type="submit" value="Check In" id="submit-button" form="sign-up-form">
+                    </div>
                 </form>
             </div>
         </div>

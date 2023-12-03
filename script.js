@@ -9,6 +9,7 @@ let passwordCharacter;
 let passwordNumber;
 let passwordCorrectValue;
 let emailMatch;
+let symbolCharacter;
 
 document.querySelector('#confirm-email').addEventListener('input', emailMatchChecker);
 document.querySelector('#email').addEventListener('input', emailMatchChecker);
@@ -25,11 +26,19 @@ function screenSize(){
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|Blackberry|IEmobile/i;
     console.log("This loaded");
     if (regex.test(navigator.userAgent)){
-        leftSide.style.height = "250px";
-        rightSide.style.width = '360px';
+        leftSide.style.height = "25%";
+        leftSide.style.width = "100%";
+        leftSide.style.border = "1px red solid";
+        rightSide.style.width = '100%';
+        rightSide.style.height = '100%';
+
     }
     else{
         leftSide.style.height = "100%";
+        leftSide.style.width = "60%";
+        rightSide.style.width = "30%";
+        rightSide.style.height = "100%";
+        
     }
 
     return regex.test(navigator.userAgent) ;
@@ -48,7 +57,7 @@ function hidePwRequirements(){
 function checkPW(){
     passwordMatch();
     pwLength();
-    pwUppercase();
+    pwCharacter();
     pwNumber();
     passwordCorrect();
 }
@@ -81,9 +90,10 @@ function pwLength(){
     }
 }
 
-function pwUppercase(){
+function pwCharacter(){
     let upper = /[A-Z]/.test(passwordBox.value);
     let lower = /[a-z]/.test(passwordBox.value);
+    let symbol = /[.,?!&@#]/.test(passwordBox.value);
 
     if (upper && lower){
         document.querySelector('#uppercase-text').style.color = 'green';
@@ -94,6 +104,18 @@ function pwUppercase(){
         document.querySelector('#uppercase-text').style.color = 'red';
         passwordCharacter = false;
         document.querySelector('#uppercase-text').innerHTML = '1+ upper case characters and 1+ lower case characters &#10005';
+    }
+
+    console.log(symbol);
+    if (symbol){
+        document.querySelector('#symbol-text').style.color = 'green';
+        symbolCharacter = true;
+        document.querySelector('#symbol-text').innerHTML = '1+ special character (.,?!&@#) &#10004';
+    }
+    else{
+        document.querySelector('#symbol-text').style.color = 'red';
+        symbolCharacter = false;
+        document.querySelector('#symbol-text').innerHTML = '1+ special character (.,?!&@#) &#10005';  
     }
 }
 
@@ -110,8 +132,10 @@ function pwNumber(){
     }
 }
 
+
+
 function passwordCorrect(){
-    if ( passwordMatching && passwordCharacter && passwordLength && passwordNumber){
+    if ( passwordMatching && passwordCharacter && passwordLength && passwordNumber && symbolCharacter){
         passwordBox.style.border = '1px solid green';
         confirmPasswordBox.style.border = '1px solid green';
         passwordCorrectValue = true;
