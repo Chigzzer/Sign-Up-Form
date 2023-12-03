@@ -21,7 +21,6 @@ confirmPasswordBox.addEventListener('focus', showPwRequirements);
 confirmPasswordBox.addEventListener('blur', hidePwRequirements);
 
 
-
 function screenSize(){
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|Blackberry|IEmobile/i;
     console.log("This loaded");
@@ -43,8 +42,6 @@ function screenSize(){
 
     return regex.test(navigator.userAgent) ;
 }
-
-
 
 function showPwRequirements(){
     pwRequirements.classList.remove('hidden');
