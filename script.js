@@ -1,7 +1,7 @@
 let passwordBox = document.querySelector('#password');
 let confirmPasswordBox = document.querySelector('#confirm-password');
 let pwRequirements = document.querySelector('#pwd-requirements');
-let leftSide = document.querySelector('.rs-main');
+let leftSide = document.querySelector('.ls-main');
 let rightSide = document.querySelector('#form-section');
 let passwordMatching;
 let passwordLength;
@@ -27,17 +27,15 @@ function screenSize(){
     if (regex.test(navigator.userAgent)){
         leftSide.style.height = "25%";
         leftSide.style.width = "100%";
-        leftSide.style.border = "1px red solid";
         rightSide.style.width = '100%';
         rightSide.style.height = '100%';
 
     }
     else{
         leftSide.style.height = "100%";
-        leftSide.style.width = "60%";
-        rightSide.style.width = "30%";
-        rightSide.style.height = "100%";
-        
+        leftSide.style.width = "70%";
+        rightSide.style.width = "29.5%";
+        rightSide.style.height = "100%";        
     }
 
     return regex.test(navigator.userAgent) ;

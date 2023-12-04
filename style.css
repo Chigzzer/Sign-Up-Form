@@ -33,7 +33,7 @@
 
 #main-body{ 
     grid-area: main;
-    border: 1px solid blue;
+    border: 0px solid blue;
     display: flex;
     flex-direction: row ;
     align-items:center ;
@@ -52,26 +52,27 @@
     opacity: 55%;
 }
 
-.rs-main{
+.ls-main{
     background-image: url("airplane.jpg");
     position: relative;
     background-size: 100% 100%;
-    border: 0px red solid;
-    position: relative;
+    border: 0px tomato solid;
 }
 
-#text-title{
-    font-size: 20px;
+#text-sect{
     position: absolute;
     top: 10%;
     left: 5%;
 }
 
+#text-title{
+    font-size: 300%;
+
+}
+
 #text-desc{
-    position: absolute;
-    bottom: 25%;
-    right: 0%;
     border: 0px solid blue;
+    font-size: 200%;
 }
 
 #form-section{
@@ -99,7 +100,7 @@
     width: 100%;
     display: flex;
     gap: 10px;
-    border: 1px solid red;
+    border: 0px solid red;
     flex-direction: column;
 }
 
@@ -123,7 +124,7 @@ label{
 #pwd-requirements{
     border: 0px solid red;
     display: flex;
-    gap: 5px;
+    gap: 10px;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -139,6 +140,7 @@ input:focus{
 input:invalid{
     border: 2px red solid;
 }
+
 .submit-div{
     width: 100%;
     border: 0px solid red;
@@ -154,12 +156,11 @@ input:invalid{
     visibility: hidden;
 }
 
-.none{
-    display: none;
-}
-
 #footer{
     grid-area: footer;
     border: 0px red solid;
-
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 2px;
 }
